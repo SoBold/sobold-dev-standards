@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$accent: #855fda;
+$background: #1c1f2f;
+$textColor: #e7e9f7;
+$borderColor: #262a40;
+$highlightColor: #7d9cff;
+$sidebarSublink: #dadce8;
+
+html.dark {
+    ::selection {
+        background-color: $accent;
+        color: $background;
+    }
+
+    body.sobold-docs {
+        background-color: $background;
+        color: $textColor;
+
+        .dark\:nx-bg-dark {
+            background-color: $background;
+            box-shadow: 0 -12px 16px rgba(darken($background, 1%), 0.8);
+        }
+
+        .nextra-nav-container {
+            .nextra-nav-container-blur {
+                background-color: rgba($background, 0.8) !important;
+            }
+        }
+
+        footer {
+            background-color: $background;
+
+            > :last-child {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
