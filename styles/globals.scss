@@ -40,3 +40,11 @@ html.dark {
         }
     }
 }
+
+:is(html[class~='dark'] .dark\:nx-border-neutral-800) {
+    border-color: $borderColor !important;
+}
+
+:is(html[class~='dark'] .dark\:before\:nx-bg-neutral-800)::before {
+    background-color: $borderColor !important;
+}

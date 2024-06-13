@@ -1,0 +1,41 @@
+# Conventional Comments
+
+## Overview
+- **Format**: Comments adhere to a consistent format for readability and machine parsing.
+- **Labels**: Comments are labeled to signify the type of feedback being provided.
+- **Decorations**: Additional context is provided through decorations, further classifying comments.
+
+## Format
+- Comments follow the format: `<label> [decorations]: <subject>`.
+- Optional discussion section provides supporting context and next steps.
+
+## Labels
+- **praise**: Highlight positive aspects.
+- **nit**: Trivial preference-based requests.
+- **suggestion**: Propose improvements.
+- **issue**: Highlight specific problems.
+- **todo**: Small, necessary changes. Blocking by default.
+- **question**: Seek clarification or investigation.
+- **thought**: Share ideas. Non blocking by default.
+- **chore**: Simple tasks necessary for acceptance. Blocking by default.
+- **note**: Highlight noteworthy information. Non blocking by default.
+
+## Decorations
+Aliases are presented after the pipe `|` sign.
+- **(non-blocking|nb)**: Comment should not prevent acceptance.
+- **(blocking|b)**: Comment should prevent acceptance until resolved.
+- **(if-minor)**: Resolve only if change is minor or trivial.
+- **(global|g)**: Applies to the whole file.
+- **(best-practice|bp)**: Comment refers directly to a best practice rule.
+
+## Usage
+- Use labels to categorize feedback effectively.
+- Provide clear, actionable comments.
+- Combine similar comments for efficiency.
+- Maintain a positive and collaborative tone.
+
+## Best Practices
+- Mentor when possible.
+- Use inclusive language ("we" instead of "you").
+- Offer suggestions rather than mandates.
+- All subjects to be meaningful.
