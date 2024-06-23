@@ -1,0 +1,45 @@
+# Overview
+
+SoBold's PHP standards follow the official guide from [PHP-FIG](https://www.php-fig.org/)
+
+## PSR-12
+
+[PSR-12](https://www.php-fig.org/psr/psr-12/) specification extends and replaces [PSR-2](https://www.php-fig.org/psr/psr-2/), but requires adherence to [PSR-1](https://www.php-fig.org/psr/psr-1/).
+
+## SoBold's PHP standards
+
+Our standards assume strict adherence to [PSR-12](https://www.php-fig.org/psr/psr-12/), and in those cases where a rule is optional (e.g. when the guide mentions SHOULD instead of MUST), following the rule is advised.
+
+### Additions
+
+In our standards we have the following additions:
+
+#### Arrow Functions
+
+Arrow functions are not defined under PSR-12 convetions, however the style rules from [Operators](https://www.php-fig.org/psr/psr-12/#6-operators) state:
+
+> When space is permitted around an operator, multiple spaces MAY be used for readability purposes.
+
+Following the style rules around spacing between the `function` keyword and its opening parenthesis, following the above quote  and borrowing example code from [Laravel Docs](https://laravel.com/docs/8.x/collections#method-takeUntilTimeout), we'll conclude the following rule:
+
+Arrow functions and its opening parenthesis MUST have one space.
+
+```php
+Invoice::pending()->cursor()
+    ->each(fn ($invoice) => $invoice->submit());
+```
+
+#### Properties & Variables
+
+[PSR-1 definition for properties](https://www.php-fig.org/psr/psr-1/#42-properties) defines:
+
+> This guide intentionally avoids any recommendation regarding the use of `$StudlyCaps`, `$camelCase`, or `$under_score` property names. Whatever naming convention is used SHOULD be applied consistently within a reasonable scope. That scope may be vendor-level, package-level, class-level, or method-level.
+
+SoBold's PHP standards extend this definition and define the following rule:
+
+Properties & Variables MUST be declared in `$camelCase`
+
+```php
+$some_variable = 10 // Incorrect
+$someVariable = 10 // Correct
+```

@@ -12,7 +12,7 @@ $sidebarSublink: #dadce8;
 html.dark {
     ::selection {
         background-color: $accent;
-        color: $background;
+        color: $textColor;
     }
 
     body.sobold-docs {
