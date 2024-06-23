@@ -16,11 +16,6 @@ Our `.eslintrc.json`, at its simplest, is the following:
     ],
     "rules": {
         "no-plusplus": 0,
-        "no-restricted-syntax": [
-            2,
-            "LabeledStatement",
-            "WithStatement"
-        ],
         "no-use-before-define": [2, "nofunc"]
     }
 }
@@ -40,6 +35,6 @@ Our configuration modifies a few of the rules set by `airbnb-base`. These rules 
 
 - [`no-plusplus`](https://eslint.org/docs/latest/rules/no-plusplus) - `0` - Airbnb enables this rule marking plusplus usage as an error, unary operators (`++` and `--`) are subject to ASI (automatic semicolon insertion), however, using prettier makes sure that semicolon are always inserted, so any incorrect semicolon behaviour can be spotted earlier and corrected.
 
-- [`no-restricted-syntax`](https://eslint.org/docs/latest/rules/no-restricted-syntax) - This rule is left untouched to airbnb's rules, `for..in` loops are disallowed as they introduce unexpected behaviour since they loop over the entire prototype chain.
+- [`no-restricted-syntax`](https://eslint.org/docs/latest/rules/no-restricted-syntax) - This rule is left untouched compared to airbnb's rules, `for..in` loops are disallowed as they introduce unexpected behaviour since they loop over the entire prototype chain.
 
 - [`no-use-before-define`](https://eslint.org/docs/latest/rules/no-use-before-define) - `[2, "nofunc"]` - This rule differs from airbnb's implementation as it allows usage of function calls before they're declared. Functions declarations (not expressions) are hoisted at the top of the file, so the usage is safe.
