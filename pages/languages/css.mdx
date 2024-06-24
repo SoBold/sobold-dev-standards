@@ -1,0 +1,42 @@
+import { Callout } from 'nextra/components';
+
+# Overview
+
+SoBold's CSS standards are enforced with stylelint and extend:
+
+- [`stylelint-config-standard-scss`](https://www.npmjs.com/package/stylelint-config-standard-scss)
+- [`stylelint-config-idiomatic-order`](https://www.npmjs.com/package/stylelint-config-idiomatic-order).
+
+## Config Standard SCSS
+
+This configuration extends:
+
+- `stylelint-config-standard` config and configures its rules for SCSS
+- `stylelint-config-recommended-scss` config
+
+The full list of rules can be found [here](https://github.com/stylelint-scss/stylelint-config-standard-scss/blob/HEAD/index.js).
+
+## Config Idiomatic Order
+
+This config enforces ordering based on [idiomatic css](https://github.com/necolas/idiomatic-css#declaration-order).
+
+The concept is that rules will have to be ordered based on their categorisation.
+The three main categories are:
+
+- Positioning - Every rule strictly related to positioning (e.g. `position`, `top|right|bottom|left`)
+
+- Display & Box Model - Rules related to display & box model, box model refers to anything between padding to margin.
+
+- Other - Any other rul that doesn't fit the above categories
+
+<Callout type="info">
+    Rules that affect any of the three axis are considered positioning rules (i.e. `z-index`)
+</Callout>
+
+<Callout type="warning">
+    Box model have to be ordered from close to far, so padding first and margin last.
+</Callout>
+
+<Callout type="warning">
+    Typography rules should come after color rules.
+</Callout>
