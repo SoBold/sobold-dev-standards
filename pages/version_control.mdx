@@ -1,0 +1,45 @@
+## Branches
+
+Since we use a task management tool it makes creating a branch naming convention rather easy.\
+When creating a new branch we should aim to follow this format:
+
+```text
+task/taskId
+```
+
+### Examples
+
+```text
+task/dev-10055
+task/dev-9610
+task/dev-8450
+```
+
+This allows for our task management tool to be referenced throughout our commit history. 
+
+## Commits
+
+SoBold's commit standards adhere to the [Conventional Commits Specification](https://www.conventionalcommits.org/).
+
+A commit message should be structured as follows:
+
+```
+<type>[optional scope]: <description>
+[optional body]
+[optional footer(s)]
+```
+
+Commonly the commit type will be either `feat` or `fix`
+
+- `feat` is a commit which introduces a new feature to the codebase.
+- `fix` is a commit which introduces a fix which patches a bug in the codebase
+
+There is also the `chore` type which is commonly used to 'bump' things.
+
+### Examples
+
+```text
+feat: update link styling
+feat(task/dev-9610): center content vertically
+fix(index): cookie expire bug
+```
