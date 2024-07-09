@@ -1,5 +1,5 @@
 ---
-name: 📚 Documentation
+name: 📄 Documentation
 about: Submit a documentation improvement
 title: '[DOCS] <title>'
 labels: documentation
