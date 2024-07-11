@@ -17,6 +17,9 @@ export default {
         link: 'https://github.com/SoBold/sobold-dev-standards',
     },
     docsRepositoryBase: 'https://github.com/SoBold/sobold-dev-standards',
+    sidebar: {
+        defaultMenuCollapseLevel: 1,
+    },
     footer: {
         text: Logo,
     },
