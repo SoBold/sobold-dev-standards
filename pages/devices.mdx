@@ -1,0 +1,64 @@
+import { Tabs } from 'nextra/components'
+
+# Overview
+Your SoBold device still requires additional setup in order to get you developing in the most efficient way.\
+Please select the relevant device for your setup.
+
+<Tabs items={['Windows', 'Mac']}>
+    {/* Windows Tab */}
+    <Tabs.Tab>
+        **pnpm**: Fast, disk space efficient package manager.
+    </Tabs.Tab>
+
+    {/* Mac Tab */}
+    <Tabs.Tab>
+        ## <img src="https://brew.sh/assets/img/homebrew.svg" class="inline mr-2" alt="Brew Logo" width={40} height={40} /> Brew
+        When using Mac we should initially install [Brew](https://brew.sh/).\
+        Brew is a package manager for MacOS which will be used further on.
+
+        __Known Issue__\
+        When installing Brew, you may be met with an error stating:
+        ```
+        user is not in the sudoers file. This incident will be reported.
+        ```
+        The solution for this is to ask someone with administrator privileges to follow [this](https://osxdaily.com/2014/02/06/add-user-sudoers-file-mac/) guide.\
+        This will result in you having sudo privileges within your terminal.
+
+        ## <img src="https://www.php.net/images/logos/php-logo-white.svg" class="inline mr-2" alt="PHP Logo" width={65} height={65} />
+        The next thing to install is PHP, simply open your terminal and type the following:
+
+        ```text
+        brew install php
+        ```
+
+        ## <img src="https://getcomposer.org/img/logo-composer-transparent.png" class="inline mr-2" alt="Composer Logo" width={40} height={40} /> Composer
+
+        In order to install Composer we need to navigate [here](https://getcomposer.org/download/) and follow the instructions.
+
+        ## <img src="https://nodejs.org/static/logos/jsIconGreen.svg" class="inline mr-2" alt="Node Logo" width={40} height={40} /> Node 
+
+        In order to install Node we want to navigate [here](https://nodejs.org/en/download/package-manager) and follow the instructions.
+
+        When installing node we want to make sure that the latest LTS (Long term support) is selected on MacOS using nvm (Node Version Manager), this process will install both nvm and node.
+
+        ### <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/800px-ESLint_logo.svg.png" class="inline mr-2" alt="ESLint Logo" width={40} height={40} /> ESLint
+        Installing ESLint on your system can be done by running the following in your terminal
+        ```text
+        npm install eslint
+        ```
+
+
+        ### Checklist
+        Finally now that we have installed all the above, let's double check they're all functioning as intended.\
+        run the following in your terminal and make sure they match the desired outcomes:
+
+        | Command           | Response                  |
+        | ----------------- | ------------------------- |
+        | `brew -v`         | `Homebrew x.y.z`          |
+        | `php -v`          | `PHP x.y.z`               |
+        | `composer -V`     | `Composer version x.y.z`  |
+        | `node -v`         | `x.y.z`                   |
+        | `nvm -v`          | `x.y.z`                   |
+        | `npx eslint -v`   | `x.y.z`                   |
+    </Tabs.Tab>
+</Tabs>
