@@ -1,5 +1,7 @@
 {
     "index": "Introduction",
     "devices": "Devices",
-    "languages": "Languages"
+    "languages": "Languages",
+    "contributing": "Contributing",
+    "version-control": "Version Control"
 }
