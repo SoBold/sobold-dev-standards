@@ -48,3 +48,9 @@ html.dark {
 :is(html[class~='dark'] .dark\:before\:nx-bg-neutral-800)::before {
     background-color: $borderColor !important;
 }
+
+h2 {
+    i[class*='devicon'] {
+        font-size: 24px;
+    }
+}
