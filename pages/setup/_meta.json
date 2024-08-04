@@ -1,7 +1,9 @@
 {
-    "software": "Software",
-    "code-editor": "Code Editor",
-    "version-control": "Version Control",
-    "dependency-management": "Dependency Management",
+    "software": " TODO Software",
+    "code-editor": "TODO Code Editor",
+    "version-control": "TODO Version Control",
+    "node": "TODO Node Dependency Management",
+    "php": "TODO PHP Dependency Management",
+    "dependency-management": "TODO Dependency Management",
     "local-development": "Local Development"
 }
