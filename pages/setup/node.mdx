@@ -1,0 +1,86 @@
+import { Steps, Tabs } from 'nextra/components';
+
+# Node.js Installation and Configuration
+
+This page provides instructions for installing and configuring Node.js and npm. Follow the steps according to your operating system.
+
+<Steps>
+### Install prerequisite program
+
+Install Homebrew for macOS or winget for Windows before installing `fnm`.
+
+### Install fnm
+
+`fnm` (Fast Node Manager) is used to manage and install different versions of Node.js. Install it using the appropriate method for your operating system.
+
+### Install Node
+
+Use `fnm` to install the latest LTS (Long Term Support) version of Node.js. This will also install npm, the package manager for Node.js.
+
+### Verify Node and npm versions
+
+Check the installed versions of Node.js and npm to ensure that the installation was successful.
+
+</Steps>
+
+## Homebrew & winget
+
+<Tabs items={['macOS', '<i class="devicon-windows11-original colored"></i> Windows']}>
+    <Tabs.Tab label="macOS">
+    </Tabs.Tab>
+    <Tabs.Tab label="Windows">
+    </Tabs.Tab>
+</Tabs>
+
+
+<Tabs items={['macOS', 'Windows']}>
+<Tabs.Tab label="macOS">
+### macOS Installation Process
+
+1. **Install Homebrew** (if not already installed)
+- Follow the instructions on the [Homebrew website](https://brew.sh).
+
+2. **Install `fnm` using Homebrew**
+- Open your terminal and run:
+```sh
+brew install fnm
+```
+
+3. **Install Node.js using `fnm`**
+- Run the following command to install Node.js:
+```sh
+fnm install --lts
+```
+- Verify the installation by checking the Node.js and npm versions:
+```sh
+node -v
+npm -v
+```
+
+</Tabs.Tab>
+
+<Tabs.Tab label="Windows">
+### Windows Installation Process
+
+1. **Install Windows Package Manager (winget)** (if not already installed)
+- Follow the instructions on the [Windows Package Manager website](https://docs.microsoft.com/en-us/windows/package-manager/).
+
+2. **Install `fnm` using winget**
+- Open Command Prompt or PowerShell and run:
+```sh
+winget install --id Schniz.fnm
+```
+
+3. **Install Node.js using `fnm`**
+- Run the following command to install Node.js:
+```sh
+fnm install --lts
+```
+- Verify the installation by checking the Node.js and npm versions:
+```sh
+node -v
+npm -v
+```
+
+</Tabs.Tab>
+</Tabs>
