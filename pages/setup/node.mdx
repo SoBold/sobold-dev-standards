@@ -1,91 +1,82 @@
-import { Steps, Tabs } from 'nextra/components';
+import { Tabs, Callout } from 'nextra/components';
 
 # Node.js Installation and Configuration
 
 This page provides instructions for installing and configuring Node.js and npm. Follow the steps according to your operating system.
 
-<Steps>
-### Install prerequisite program
+The primary goal is to install Node.js. To achieve this, Homebrew (for macOS) or Winget (for Windows) will be required to facilitate the installation process of Node.js and its package manager, npm.
 
-Install Homebrew for macOS or winget for Windows before installing `fnm`.
+## Install Homebrew
 
-### Install fnm
+Homebrew is a package manager for macOS. Install it by running the command provided on the [Homebrew website](https://brew.sh) in your terminal. This will set up Homebrew and allow you to manage software installations easily.
 
-`fnm` (Fast Node Manager) is used to manage and install different versions of Node.js. Install it using the appropriate method for your operating system.
+## Install winget
 
-### Install Node
+<Callout>
+Winget on Windows 10 & 11 comes pre installed as part of the App Installer
+</Callout>
 
-Use `fnm` to install the latest LTS (Long Term Support) version of Node.js. This will also install npm, the package manager for Node.js.
+Winget is a package manager for Windows. Install it by following the instructions on the [Windows Package Manager website](https://docs.microsoft.com/en-us/windows/package-manager/). This will enable you to install and manage software via the command line.
 
-### Verify Node and npm versions
+## Install fnm
 
-Check the installed versions of Node.js and npm to ensure that the installation was successful.
+A guide to the installation process can be found in [fnm Github page](https://github.com/Schniz/fnm?tab=readme-ov-file#installation).
 
-</Steps>
-
-## Homebrew & winget
+For manual installation through command line, use:
 
 <Tabs items={['macOS', 'Windows']}>
     <Tabs.Tab label="macOS">
-
+        ```sh
+        brew install fnm
+        ```
     </Tabs.Tab>
     <Tabs.Tab label="Windows">
+        ```sh
+        winget install Schniz.fnm
+        ```
     </Tabs.Tab>
-</Tabs>
-
-
-<Tabs items={['macOS', 'Windows']}>
-<Tabs.Tab label="macOS">
-### macOS Installation Process
-
-1. **Install Homebrew** (if not already installed)
-- Follow the instructions on the [Homebrew website](https://brew.sh).
-
-2. **Install `fnm` using Homebrew**
-- Open your terminal and run:
-```sh
-brew install fnm
-```
-
-3. **Install Node.js using `fnm`**
-- Run the following command to install Node.js:
-```sh
-fnm install --lts
-```
-- Verify the installation by checking the Node.js and npm versions:
-```sh
-node -v
-npm -v
-```
-
-</Tabs.Tab>
-
-<Tabs.Tab label="Windows">
-### Windows Installation Process
-
-1. **Install Windows Package Manager (winget)** (if not already installed)
-- Follow the instructions on the [Windows Package Manager website](https://docs.microsoft.com/en-us/windows/package-manager/).
-
-2. **Install `fnm` using winget**
-- Open Command Prompt or PowerShell and run:
-```sh
-winget install --id Schniz.fnm
-```
-
-3. **Install Node.js using `fnm`**
-- Run the following command to install Node.js:
-```sh
-fnm install --lts
-```
-- Verify the installation by checking the Node.js and npm versions:
-```sh
-node -v
-npm -v
-```
-
-</Tabs.Tab>
 </Tabs>
 
 ## Install Node
 
+To install Node LTS run the following command:
+
+```sh
+fnm install --lts
+```
+
+To list all the installed versions of Node installed with `fnm`, use:
+
+```sh
+fnm ls
+```
+
+To use a specific installed version, use:
+
+```sh
+fnm use 18
+```
+
 ### Verify installation
+
+Confirm that Node.js and npm are correctly installed by checking their versions. This ensures that the installation was successful and both tools are available for use.
+
+```sh
+node -v
+```
+
+```sh
+npm -v
+```
+
+Both commands should output the version number of the corresponding tool.
+
+### Node.js Releases
+
+Node.js versions enter `Current` release status for six months, allowing time for library updates.\
+Odd-numbered versions (7, 9, 11) become unsupported after six months, while even-numbered versions (8, 10, 12) shift to `Active LTS`, providing long-term support and critical bug fixes for up to 30 months.
+Production applicationns should only use `Active LTS` or `Maintenance LTS` releases.
+
+### Release Schedule
+
+For detailed release schedules, visit the [Node.js GitHub page](https://github.com/nodejs/Release).

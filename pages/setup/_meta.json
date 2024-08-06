@@ -2,7 +2,7 @@
     "software": " Software",
     "code-editor": "TODO Code Editor",
     "version-control": "TODO Version Control",
-    "node": "TODO Node Dependency Management",
+    "node": "Node Dependency Management",
     "php": "TODO PHP Dependency Management",
     "dependency-management": "TODO Dependency Management",
     "local-development": "Local Development"
