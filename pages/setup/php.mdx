@@ -4,8 +4,6 @@ import { Tabs, Callout } from 'nextra/components';
 
 This page provides instructions for installing and configuring PHP and Composer. Follow the steps according to your operating system.
 
-The primary goal is to install PHP and Composer. To achieve this, Homebrew (for macOS) or Winget (for Windows) will be required to facilitate the installation process of PHP and Composer.
-
 ## Install PHP
 
 To install PHP, follow the instructions based on your operating system.
@@ -17,9 +15,13 @@ To install PHP, follow the instructions based on your operating system.
         ```
     </Tabs.Tab>
     <Tabs.Tab label="Windows">
-        ```sh
-        winget install php
-        ```
+        <Callout>
+            **Thread Safe (TS)** is for multi-threaded servers, while **Non-Thread Safe (NTS)** is faster for non-threaded environments. As we only need php for Composer we won't need to worry about Thread Safety and can choose the Non-Thread Safe version
+        </Callout>
+        1. Visit [PHP for Windows](https://windows.php.net/download/).
+        2. Download the latest stable version choosing Non-Thread Safe and choosing x86 or x64 depending on whether the system is 32-bit or 64-bit.
+        3. Extract the zip file in `C:\php`.
+        4. Add php directory to `PATH`.
     </Tabs.Tab>
 </Tabs>
 
@@ -36,9 +38,7 @@ For manual installation through the command line, use:
         ```
     </Tabs.Tab>
     <Tabs.Tab label="Windows">
-        ```sh
-        winget install composer
-        ```
+        To install Composer on Windows, refer to the instructions on [Composer's installation page](https://getcomposer.org/doc/00-intro.md#installation-windows).
     </Tabs.Tab>
 </Tabs>
 
@@ -55,18 +55,3 @@ composer -v
 ```
 
 Both commands should output the version number of the corresponding tool.
-
-## PHP Versions
-
-PHP versions follow a structured release cycle:
-- **Active Support**: PHP versions are actively maintained with bug fixes and security updates.
-- **Security Fixes Only**: PHP versions receive only security updates but no new features or bug fixes.
-- **End of Life**: PHP versions that no longer receive updates.
-
-Production applications should only use PHP versions that are under **Active Support** or **Security Fixes Only**.
-
-## Release Schedule
-
-For detailed release schedules, visit the [PHP Release Info page](https://www.php.net/releases).
-
----

@@ -3,7 +3,7 @@
     "code-editor": "TODO Code Editor",
     "version-control": "TODO Version Control",
     "node": "Node Dependency Management",
-    "php": "TODO PHP Dependency Management",
+    "php": "PHP Dependency Management",
     "dependency-management": "TODO Dependency Management",
     "local-development": "Local Development"
 }
