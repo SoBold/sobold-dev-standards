@@ -1,0 +1,42 @@
+import { Callout } from 'nextra/components';
+
+# Setting Up Git
+
+## Introduction
+
+This guide provides instructions for installing and configuring Git on Windows and macOS.
+
+## Install Git
+
+### Installation on Windows
+
+Go to [Git Download for Windows](https://git-scm.com/download/win) and follow the Winget instructiongs.
+
+The command should be:
+```bash
+winget install --id Git.Git -e --source winget
+```
+
+### Installation on macOS
+
+For macOS run:
+```bash
+brew install git
+```
+
+For Macs running macOS Sierra or higher that have the latest homebrew there won't be other steps required, brew will make sure that the latest version of Git is being used even if other git versions are installed.
+
+### Verify installation
+
+To verify the installation simply run:
+```bash
+git -v
+```
+
+You should see the Git version number displayed.
+
+<Callout>
+If after updating Git the version still shows as the old one, reinstantiate the terminal to refresh the environment.
+</Callout>
+
+## Initial Git Configuration
