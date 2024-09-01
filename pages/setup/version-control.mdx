@@ -40,3 +40,52 @@ If after updating Git the version still shows as the old one, reinstantiate the 
 </Callout>
 
 ## Initial Git Configuration
+
+Git stores its configuration in three levels: **system** (varies by system), **global** (`~/.gitconfig`), and **local** (`.git/config` in each repository). System settings apply to all users, global settings apply to the current user, and local settings apply to individual repositories.
+
+<Callout type="info">
+System configuration is usually found where Git is installed, such as /opt/homebrew/etc/gitconfig for Homebrew, and can be ignored.
+</Callout>
+
+The local Git configuration should never be modified, as it is specific to the repository and managed by the repository owner.
+
+<Callout type="info">
+To find configuration rules and their locations, run git config --list --show-origin in the terminal.
+</Callout>
+
+### Global configuration
+
+<Callout type="warning">
+Remember to update the name and email settings to your own.
+</Callout>
+
+To modify the global Git configuration, open `~/.gitconfig` in a text editor using `code ~/.gitconfig` and paste the following configuration:
+
+```
+[user]
+    name = [your-name]
+    email = [github-account-email]
+[init]
+    defaultBranch = main
+[core]
+    autocrlf = input
+    fscache = true
+    symlinks = false
+    editor = code --wait
+[pull]
+    rebase = true
+[fetch]
+    prune = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[diff]
+    tool = vscode
+    colorMoved = zebra
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[diff "astextplain"]
+    textconv = astextplain
+```
