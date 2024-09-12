@@ -5,3 +5,47 @@ Visual Studio Code (VS Code) is the IDE of choice for the company. This guide ex
 ## Install Visual Studio Code
 
 Visit the [Visual Studio Code website](https://code.visualstudio.com/) and go to the download page. Download the installer for your operating system, and run it following the installation instructions.
+
+## Setup
+
+After installing VS Code not much is left in terms of setup.
+
+### Launching from the command line
+
+VS Code can be run from the terminal by typing 'code'.
+Windows users should be able to do this straight after the installation.
+MacOS users will be able to use this feature after adding `code` to the path:
+
+- Launch VS Code.
+- Open the *Command Palette* (`⌘+⇧+P`) and type 'shell command' to find *Shell Command: Install 'code' command in PATH* command.
+- Restart the terminal for the new `$PATH` value to take effect. You'll be able to type 'code .' in any folder to start editing files in that folder.
+
+## Tips & Tricks
+
+VS Code can be used from within the cli interface, here's some commands:
+
+```sh
+# open code with current directory
+code .
+
+# open the current directory in the most recently used code window
+code -r .
+
+# create a new window
+code -n
+
+# change the language
+code --locale=es
+
+# open diff editor
+code --diff <file1> <file2>
+
+# open file at specific line and column <file:line[:character]>
+code --goto package.json:10:5
+
+# see help options
+code --help
+
+# disable all extensions
+code --disable-extensions .
+```
