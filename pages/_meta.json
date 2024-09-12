@@ -3,5 +3,6 @@
     "setup": "Setup",
     "languages": "Languages",
     "contributing": "Contributing",
-    "version-control": "Version Control"
+    "version-control": "Version Control",
+    "acf conventions": "ACF Conventions"
 }
