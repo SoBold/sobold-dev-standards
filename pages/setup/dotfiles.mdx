@@ -1,0 +1,41 @@
+# Dotfiles
+
+This page provides information on how to set up dotfiles.
+
+## .editorconfig
+
+`.editorconfig` is a configuration file that defines coding styles and editor settings to achieve consistent formatting within a project.
+
+**Location**: `~/.editorconfig`
+
+```ini
+root = true;
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+```
+
+## .prettierrc
+
+Configures Prettier settings for code formatting.
+
+**Location**: `~/.prettierrc`
+
+```json
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "arrowParens": "avoid"
+}
+```
