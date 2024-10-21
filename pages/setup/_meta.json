@@ -1,11 +1,11 @@
 {
     "software": " Software",
-    "code-editor": "DOING Code Editor",
-    "core-profile": "DOING Core profile",
-    "dotfiles": "Dotfiles",
     "node": "Node Dependency Management",
     "php": "PHP Dependency Management",
+    "code-editor": "Code Editor",
+    "core-profile": "Core profile",
+    "npm-packages": "npm Packages",
+    "dotfiles": "Dotfiles",
     "version-control": "Version Control",
-    "dependency-management": "TODO Dependency Management",
     "local-development": "Local Development"
 }
