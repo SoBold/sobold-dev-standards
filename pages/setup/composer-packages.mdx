@@ -1,0 +1,27 @@
+import { Callout } from 'nextra/components';
+
+# Composer Packages
+
+This page provides an overview of the Composer packages required for the [Core](/setup/core-profile) profile, especially for tasks like linting. These packages need to be installed globally to ensure proper functionality across all projects.
+
+## PHPCS
+
+The `phpcs` Composer package provides a coding standard tool for PHP, checking code for style violations using PHP_CodeSniffer. It helps enforce consistent code style across a project.
+
+### Installation
+
+To install `phpcs` globally run:
+
+```sh
+composer global require "squizlabs/php_codesniffer=*"
+```
+
+You can verify the installation by running:
+
+```sh
+phpcs -v
+```
+
+## Next steps
+
+After installing the Composer packages, head over to the [dotfiles](/setup/dotfiles) page to configure and manage the necessary dotfiles.
