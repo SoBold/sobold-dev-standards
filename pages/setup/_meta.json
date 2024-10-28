@@ -5,6 +5,7 @@
     "code-editor": "Code Editor",
     "core-profile": "Core Profile",
     "npm-packages": "npm Packages",
+    "composer-packages": "Composer Packages",
     "dotfiles": "Dotfiles",
     "version-control": "Version Control",
     "local-development": "Local Development"
