@@ -1,8 +1,7 @@
 {
-    "software": " Software",
+    "code-editor": "Code Editor",
     "node": "Node Dependency Management",
     "php": "PHP Dependency Management",
-    "code-editor": "Code Editor",
     "core-profile": "Core Profile",
     "npm-packages": "npm Packages",
     "composer-packages": "Composer Packages",
