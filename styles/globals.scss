@@ -49,6 +49,15 @@ html.dark {
     background-color: $borderColor !important;
 }
 
+.nextra-steps {
+    h3::before {
+        background-color: $borderColor !important;
+        color: $textColor !important;
+        border-color: $background !important;
+    }
+}
+
+
 h2 {
     i[class*='devicon'] {
         font-size: 24px;
@@ -60,3 +69,4 @@ h2 {
         }
     }
 }
+
