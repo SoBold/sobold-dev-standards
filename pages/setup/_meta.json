@@ -1,11 +1,8 @@
 {
     "code-editor": "Code Editor",
     "core-profile": "Core Profile",
-    "node": "Node Dependency Management",
-    "php": "PHP Dependency Management",
-    "npm-packages": "npm Packages",
-    "composer-packages": "Composer Packages",
+    "npm": "npm",
+    "composer": "Composer",
     "dotfiles": "Dotfiles",
-    "version-control": "Version Control",
-    "local-development": "Local Development"
+    "version-control": "Version Control"
 }

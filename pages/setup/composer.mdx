@@ -2,6 +2,8 @@ import { Tabs, Callout } from 'nextra/components';
 
 # PHP and Composer Installation and Configuration
 
+## Introduction
+
 This page provides instructions for installing and configuring PHP and Composer. Follow the steps according to your operating system.
 
 ## Install PHP
@@ -55,3 +57,30 @@ composer -v
 ```
 
 Both commands should output the version number of the corresponding tool.
+
+
+## Core
+
+This section provides an overview of the Composer packages required for the [Core](/setup/core-profile) profile, especially for tasks like linting. These packages need to be installed globally to ensure proper functionality across all projects. If you haven't completed the steps necessary to install PHP and Composer please go to the [top of the page](#introduction)
+
+### PHPCS
+
+The `phpcs` Composer package provides a coding standard tool for PHP, checking code for style violations using PHP_CodeSniffer. It helps enforce consistent code style across a project.
+
+#### Installation
+
+To install `phpcs` globally run:
+
+```sh
+composer global require "squizlabs/php_codesniffer=*"
+```
+
+You can verify the installation by running:
+
+```sh
+phpcs -v
+```
+
+### Next steps
+
+Head back to the [Core page](/setup/core-profile/#prerequisites) to finish configuring the necessary prerequisites for Core Profile.

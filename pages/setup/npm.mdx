@@ -2,6 +2,8 @@ import { Tabs, Callout } from 'nextra/components';
 
 # Node.js Installation and Configuration
 
+## Introduction
+
 This page provides instructions for installing and configuring Node.js and npm. Follow the steps according to your operating system.
 
 The primary goal is to install Node.js. To achieve this, Homebrew (for macOS) or Winget (for Windows) will be required to facilitate the installation process of Node.js and its package manager, npm.
@@ -71,7 +73,7 @@ npm -v
 
 Both commands should output the version number of the corresponding tool.
 
-### Node.js Releases
+## Node.js Releases
 
 Node.js versions enter `Current` release status for six months, allowing time for library updates.\
 Odd-numbered versions (7, 9, 11) become unsupported after six months, while even-numbered versions (8, 10, 12) shift to `Active LTS`, providing long-term support and critical bug fixes for up to 30 months.
@@ -80,3 +82,30 @@ Production applicationns should only use `Active LTS` or `Maintenance LTS` relea
 ### Release Schedule
 
 For detailed release schedules, visit the [Node.js GitHub page](https://github.com/nodejs/Release).
+
+
+## Core
+
+This section provides an overview of the npm required for the [Core](/setup/core-profile) profile, especially for tasks like linting. These packages need to be installed globally to ensure proper functionality across all projects. If you haven't completed the steps necessary to install Node and npm please go to the [top of the page](#introduction)
+
+### EditorConfig
+
+EditorConfig is a tool that helps maintain consistent coding styles across different editors and IDEs by defining coding conventions, such as indentation, line endings, and character encoding, in a configuration file (`.editorconfig`).
+
+#### Installation
+
+To install `editorconfig` globally run:
+
+```sh
+npm i -g editorconfig
+```
+
+You can verify the installation by running:
+
+```sh
+npm list -g editorconfig
+```
+
+### Next steps
+
+Head back to the [Core page](/setup/core-profile/#prerequisites) to finish configuring the necessary prerequisites for Core Profile.
