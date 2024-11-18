@@ -53,8 +53,11 @@ php -v
 ```
 
 ```sh
-composer -v
+composer -V
 ```
+<Callout type="warning">
+Note the capital `V` on `composer -V`
+</Callout>
 
 Both commands should output the version number of the corresponding tool.
 
@@ -76,7 +79,21 @@ composer global require "squizlabs/php_codesniffer=*"
 ```
 
 To avoid having to define the global path of `phpcs` in VS Code settings, add %composer packages% it to your PATH.
-TODO specify path
+
+For Windows this is in:
+```sh
+C:\Users\<username>\AppData\Roaming\Composer\vendor\bin
+```
+
+On macOS (and Linux)
+- Prior to Composer 2.x:
+```sh
+~/.composer/vendor/bin
+```
+- Composer 2.x:
+```sh
+~/.config/composer/vendor/bin
+```
 
 You can verify the installation by running:
 
