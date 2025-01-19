@@ -1,0 +1,101 @@
+# Page Speed Optimisation
+
+## Image Optimisation
+
+### Lazy Loading
+
+#### Definition
+
+Lazy loading is the deferring of all non-critical resources (resources that are not above the fold), mainly images, iframes and videos, and only loading them when they are needed and about to enter the viewport, which improves the initial page loading times.
+
+This should be something we implement from the start on all website projects.
+
+#### Why It’s Important
+
+Google considers page speed a ranking factor, specifically mobile page speed as it now only indexes via mobile. It’s also a core pillar of performance scores on Google Lighthouse, which we typically send to clients when demonstrating the impact of our work.
+
+#### How to Implement
+
+We want all images outside of the critical viewport (or below the fold however you prefer to refer
+to it) to have a `loading=”lazy”` attribute.
+
+This can be implemented via plugins, such as Optimole (we recommend this plugin because it’s the most eﬀective for lazy loading and image compression, other plugins like Smush are quite bad at this).
+
+We can then verify it’s working properly via Google Lighthouse or Page Speed Insights, or you can ask the SEO team to verify.
+
+
+### Image Compression
+
+#### Definition
+
+This refers to reducing the file sizes of images without compromising image quality.
+
+#### Why It’s Important
+
+The bigger the image file sizes are, the longer it takes them to load, reducing the page’s overall size and increasing the loading speed, which is a ranking factor for Google.
+
+#### How to Implement
+
+We can compress images using a plugin like Optimole or Web Media Converter for bulk compressions on images already uploaded into a media gallery.
+
+We would not recommend the use of Smush, as this does a poor job of reducing the file sizes and often skips compression of images.
+
+If possible, images are compressed using a tool like Photopea prior to being uploaded into the CMS, but this requires more manual work.
+
+Once compression is complete, it’s worth checking the quality of the image has not been compromised too much and that image quality is still similar to before, only with a smaller file size.
+
+### Use of Webp and Modern Image Formats
+
+#### Definition
+
+Webp is a modern image format that provides superior lossless and lossy compression for images compared to other formats like PNG or JPEG.
+#### Why It’s Important
+
+Webp substantially reduces image file sizes significantly without sacrificing image quality, which means less resources to load and faster loading times.
+
+Pages that load faster because of optimised image formats will perform better in Google’s Core Web Vitals which has a beneficial eﬀect in the search results.
+
+#### Best Practices for Developers
+
+If possible, serve images in a Webp format using plugins e.g. Optimole.
+
+You can verify browser compatibility using responsive image techniques like srcset to serve
+the correct format based on browser capabilities.
+
+### Minification
+
+#### Definition
+
+Minification is the process of removing unnecessary characters (such as spaces, comments, and line breaks) from source code files like CSS, Javascript, and HTML without impacting functionality.
+
+#### Why It’s Important
+
+This reduces the size of CSS, Javascript and HTML files, which decreases the time it takes for a browser to download and process them, leading to faster page load times.
+
+Google prioritises fast-loading websites in their rankings. Minified code helps improve performance, especially on mobile devices, and positively impacts Core Web Vitals like First Contentful Paint (FCP) and Largest Contentful Paint (LCP).
+
+#### Best Practice for Developers
+Note for Leo - perhaps you’re better placed to give specific instructions here
+
+We can use minification plugins like Autoptimise which we used on Bioscript, but it’s vital to check that these don’t impact functionality and break the site. Always test before deploying.
+
+### Javascript Optimisation
+
+#### Definition
+
+This refers to improving the eﬃciency and load behaviour of Javascript to ensure it doesn’t block rendering or slow down page speed. This can include techniques such as deferring scripts, reducing the number of external requests, and ensuring that non-essential scripts load after the main content.
+#### Why It’s Important
+
+Javascript is often a bottleneck in page performance, especially when scripts are render blocking or poorly optimised. It can also result in delays for crawling the entire content on a page. Google crawls a page in two stages - it takes a snapshot of the html just as it is, and then adds any content behind Javascript to a render queue, which it comes back and renders at a later date.
+
+Proper optimisation reduces loading times and ensures the page is interactive faster, which is better for search rankings.
+
+Google’s rankings factor in page load speed and responsiveness, especially now that indexing is mobile-first. Optimising Javascript prevents delays in page rendering and improves user experience, which impacts rankings.
+
+#### Best Practices for Developers
+
+Another note for Leo - you may be better placed to give specific instructions here
+
+We can use defer or async attributes on Javascript files to load non-critical Javascript without
+blocking rendering.
+We can eliminate unnecessary Javascript libraries or unused code to reduce the payload.

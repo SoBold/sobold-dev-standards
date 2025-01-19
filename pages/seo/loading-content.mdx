@@ -1,0 +1,50 @@
+# Pagination & Content Loading
+
+## Definition
+
+This is most commonly used for News/Blog or Search Results sections on a website, where we often use a 'Load More' or 'Read More' to condense results.
+
+Pagination refers to dividing the content across multiple pages rather than using the 'Load More' function or an infinite scroll.
+
+Each page has a unique URL, e.g.:
+
+https://www.example.com/blog/
+https://www.example.com/blog/page/2/
+https://www.example.com/blog/page/3/
+
+Pagination can be implemented via AJAX, but it’s more beneficial from a crawling perspective to implement pagination using HTML links.
+
+
+## Why It’s Important
+
+Google discovers pages on a website by scanning a page for links to other pages. If there is a page with a 'Load more' function, any articles below the 'Load more' aren’t visible to Google, and so it becomes harder for Google to index these.
+
+By using pagination, Google can follow the links from
+
+https://www.example.com/blog/ to
+https://www.example.com/blog/page/2/, and then to
+https://www.example.com/blog/page/3/ and so on, meaning every article has better visibility and is much easier for Google to find and index, increasing the likelihood of more traﬃc because more content is discoverable and ranking.
+
+
+## Best Practices for Developers
+
+Implement pagination links with `rel="next"` and `rel="prev"` attributes to signal to search engines the relationship between paginated pages.
+
+Ensure the additional pages are not self-canonical, meaning that only the main https://www.example.com/blog/ page will be indexed, and the additional pages are not competing with it in the search.
+We don’t want /blog/page/2/, /blog/page/3/ etc. to rank in Google, only for them to uplift the visibility of the individual articles on each paginated page.
+
+For search results pages, these should always be set to noindex, `otherwise` spammers can attempt to take advantage of the search feature to send links on indexed pages to their spammy websites.
+
+## Links in Pagination
+
+### Definition
+
+As we’re implementing links from one page to another, it’s vital we enter these links correctly and don’t create additional 404s and 301s.
+
+### Why It’s Important
+
+Broken links (404s) and redirects (301s) in pagination create obstacles for Google, wasting crawl budget and results in ineﬃcient crawling.
+
+### Best Practices for Developers
+
+Ensure all pagination links are accurate, without any redirects or broken links. Take care that URLs are entered with the backslash, use https:// and follow the correct formatting of including or not including www. based on how the URL is formatted for the website.
